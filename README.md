@@ -1,46 +1,38 @@
-# Getting Started with Create React App
+Student Report Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 1. Require softwares / frameworks / packages
 
-## Available Scripts
+## Please download and install with the following list before start to use.
 
-In the project directory, you can run:
+1.1 Git (version 2.30.0)
+https://git-scm.com/downloads
 
-### `yarn start`
+1.2 Github
+https://github.com/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1.3 Node.js (at least version 14.15.4)
+https://nodejs.org/es/blog/release/v14.15.4/
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Package:
 
-### `yarn test`
+1.4 Yarn (version 1.22.10)
+https://classic.yarnpkg.com/en/docs/install/#mac-stable
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1.5 Create-react-app[ Typescript version ] (version 4.0.3)
+https://create-react-app.dev/docs/adding-typescript/
 
-### `yarn build`
+yarn create react-app my-app --template typescript
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1.6 Sass (version 1.32.8 compiled with dart2js version 2.10.5)
+https://sass-lang.com/install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2.  Procedure of compilation
+    Recommend to follow the steps below.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    2.1 Download the repository to your computer (or copy the source link to download the repository by Github Desktop)
 
-### `yarn eject`
+    2.2 Open the terminal or cmd from your computer
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    2.3 Enter the command: " cd [ your repository file address ] "
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+    2.4 Enter the command: " npm install -g yarn "
