@@ -1,0 +1,28 @@
+#background-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+#title {
+  margin-top: 2%;
+  margin-left: 2%;
+  font-size: 5em;
+  font-family: "Roboto-Bold";
+}
+
+#information-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 5%;
+  margin-left: 2%;
+  .information-border {
+    font-family: "Roboto-Bold";
+    font-size: 3em;
+    border: 0.2em solid white;
+    padding-right: 5%;
+    background-color: white;
+    margin-bottom: 5%;
+    margin-right: -5%;
+  }
+}

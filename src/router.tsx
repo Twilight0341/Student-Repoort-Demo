@@ -1,4 +1,5 @@
 import React from "react";
+import "./index.scss";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 import Report from "./TS/ScreenPage";
 
