@@ -1,13 +1,21 @@
 import React from "react";
 import Styles from "../CSS/ScreenPage.module.scss";
 import CSS from "csstype";
-import { Bar, Line } from "react-chartjs-2";
+import { Bar, Line, Radar, Doughnut } from "react-chartjs-2";
 
 import {
   barChartData,
   barChartSetUp,
   lineChartData,
   lineChartSetUp,
+  radarChartData,
+  radarChartSetUp,
+  barChartData2,
+  barChartSetUp2,
+  doughnutChartData,
+  doughnutChartSetUp,
+  doughnutChartData2,
+  doughnutChartSetUp2,
 } from "./Chart/chartData";
 import QuestionAmount from "./questionAmount";
 
@@ -39,13 +47,19 @@ export default class Report extends React.Component<{}, State> {
       result: { sore: 50, totalSore: 58 },
       mean: { member: 36, totalMember: 58 },
       star: [1, 1, 1, 1, 1],
-      ranking: 4,
+      ranking: 60,
       Question: { amount: 30, totalAmount: 38 },
     };
   }
   componentDidMount() {
     document.body.style.backgroundColor = "#f2928c";
   }
+
+  RotationAngle = () => {
+    let value = (180 * this.state.ranking) / 100;
+    console.log(value);
+    return `rotate(${value}deg)`;
+  };
 
   pinRotate: CSS.Properties = {
     position: "absolute",
@@ -54,7 +68,7 @@ export default class Report extends React.Component<{}, State> {
     height: "90%",
     top: "45%",
     right: "50%",
-    transform: "rotate(10deg)",
+    transform: "rotate(20deg)",
     transformOrigin: "86% 50%",
     transition: "100ms",
   };
@@ -158,7 +172,7 @@ export default class Report extends React.Component<{}, State> {
                     />
                     <img
                       id={Styles["iconic-data-pin"]}
-                      style={{ transform: "rotate(30deg)" }}
+                      style={{ transform: this.RotationAngle() }}
                       src={Pin}
                       alt="I am Pin"
                     />
@@ -190,25 +204,54 @@ export default class Report extends React.Component<{}, State> {
             {/* /////////////////////////////////////////////////////////////////////////// */}
             {/* Line chart */}
             <div id={Styles["line-chart-grid"]}>
-              <div>
-                <Line data={lineChartData} options={lineChartSetUp} />
+              <div id={Styles["line-chart-wrapper"]}>
+                <Line
+                  id={Styles["line-chart-content"]}
+                  data={lineChartData}
+                  options={lineChartSetUp}
+                />
               </div>
             </div>
             {/* /////////////////////////////////////////////////////////////////////////// */}
 
             {/* /////////////////////////////////////////////////////////////////////////// */}
             {/* Radar Chart */}
-            <div id={Styles["radar-chart-grid"]}></div>
+            <div id={Styles["radar-chart-grid"]}>
+              <div id={Styles["radar-chart-wrapper"]}>
+                <Radar data={radarChartData} options={radarChartSetUp} />
+              </div>
+            </div>
             {/* /////////////////////////////////////////////////////////////////////////// */}
 
             {/* /////////////////////////////////////////////////////////////////////////// */}
             {/* Horizontal bar chart 2 */}
-            <div id={Styles["bar-chart2-grid"]}></div>
+            <div id={Styles["bar-chart2-grid"]}>
+              <div id={Styles["bar-chart2-wrapper"]}>
+                <Bar
+                  id={Styles["bar-chart2-content"]}
+                  data={barChartData2}
+                  options={barChartSetUp2}
+                />
+              </div>
+            </div>
             {/* /////////////////////////////////////////////////////////////////////////// */}
 
             {/* /////////////////////////////////////////////////////////////////////////// */}
             {/* Pie chart */}
-            <div id={Styles["pie-chart-grid"]}></div>
+            <div id={Styles["doughnut-chart-grid"]}>
+              <div id={Styles["doughnut-chart-wrapper"]}>
+                <Doughnut
+                  id={Styles["doughnut-chart-content"]}
+                  data={doughnutChartData}
+                  options={doughnutChartSetUp}
+                />
+                {/* <Doughnut
+                  id={Styles["doughnut-chart2-content"]}
+                  data={doughnutChartData2}
+                  options={doughnutChartSetUp2}
+                /> */}
+              </div>
+            </div>
             {/* /////////////////////////////////////////////////////////////////////////// */}
           </div>
           {/* /////////////////////////////////////////////////////////////////////////// */}
